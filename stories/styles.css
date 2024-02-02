@@ -1,0 +1,77 @@
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the minimum width of each card */
+    grid-gap: 20px; /* Adjust the gap between cards */
+    padding: 20px; /* Add padding around the grid */
+  }
+  
+  .story {
+    background-color: var(--card-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .story:hover {
+    transform: translateY(-5px);
+  }
+  
+  .story img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .story-title a {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  .story-title a:hover {
+    color: var(--link-hover-color);
+  }
+  
+  .story-title a:active {
+    color: var(--link-active-color);
+  }
+  
+  .story-date {
+    font-size: 0.9em;
+    color: var(--text-light-color);
+    margin-bottom: 5px;
+  }
+  
+  .story-description {
+    font-size: 0.9em;
+    color: var(--text-light-color);
+    line-height: 1.4;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: var(--tag-background-color);
+    color: var(--tag-text-color);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  
+  .tag.active {
+    background-color: var(--tag-active-background-color);
+    color: var(--tag-active-text-color);
+  }
+  
+  .hidden {
+    display: none;
+  }

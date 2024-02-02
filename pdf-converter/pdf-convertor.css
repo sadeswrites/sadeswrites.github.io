@@ -1,0 +1,40 @@
+/* pdf-converter.css */
+:root {
+    --border-color: #ccc; /* Light gray border color */
+    --button-background-color: #40514e; /* Dark green button background */
+    --button-text-color: #fff; /* White button text color */
+    --button-hover-background-color: #6d7373; /* Medium dark green button hover background */
+  
+    /* Add more variables as needed */
+  }
+  
+.converter-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#pdfInput {
+    margin-bottom: 20px;
+}
+
+.html-output {
+    border: 1px solid #ccc;
+    padding: 10px;
+    white-space: pre-wrap;
+    background-color: #fff;
+}
+
+.convert-button {
+    padding: 10px 20px;
+    background-color: #40514e; /* Dark green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.convert-button:hover {
+    background-color: #6d7373; /* Medium dark green hover */
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Stories</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="#">stories</a></li>
+                <li><a href="../index.html#about">about</a></li>
+                <li><a href="../index.html#commissions">commissions</a></li>
+                <li><a href="../index.html#contact">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="../sadie.jpg" alt="Profile Picture" class="profile-picture">
+        <h1>sadeswrites' portfolio</h1>
+        <p>queer-friendly sci-fi and fantasy short stories</p>
+        <p>click on a tag below to filter stories</p>
+    </section>
+
+    <section class="story-grid">
+        <div class="story">
+            <div class="story-info">
+                <h2 class="story-title"><a href="the-last-star/index.html">The Last Star</a></h2>
+                <p class="publish-date">Published on February 1, 2024</p>
+                <div class="tags">
+                    <span class="tag"  data-tag="scifi">Sci-Fi</span>
+                    <span class="tag" data-tag="supernatural">Supernatural</span>
+                    <span class="tag" data-tag="space">Space</span>
+                    <span class="tag" data-tag="shortstory">Short Story</span>
+                    <span class="tag" data-tag="1kwords">&#60;1k words</span>
+                    <!-- Add more tags as needed -->
+                </div>
+                <p class="description">The stars in the night sky have begun to disappear.</p>
+            </div>
+        </div>
+
+        <!-- Repeat the above story div for each story -->
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="https://www.tumblr.com/sadeswrites">tumblr</a></li>
+            <li><a href="https://www.fiverr.com/sadeswrites">fiverr</a></li>
+            <li><a href="https://www.threads.net/@sadeswrites">threads</a></li>
+            <li><a href="https://www.instagram.com/sadeswrites/">instagram</a></li>
+        </ul>
+        <p>&copy;2024 sadeswrites</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tags = document.querySelectorAll('.tag');
+            const stories = document.querySelectorAll('.story');
+
+            tags.forEach(tag => {
+                tag.addEventListener('click', () => {
+
+                    const selectedTag = tag.dataset.tag;
+
+                    stories.forEach(story => {
+                        story.classList.remove('hidden');
+                        const storyTags = story.querySelectorAll('.tag');
+
+                        storyTags.forEach(storyTag => {
+                            if (storyTag.dataset.tag !== selectedTag) {
+                                storyTag.classList.remove('active');
+                            }
+                        });
+                    });
+
+                    // Filter stories based on selected tag
+                    stories.forEach(story => {
+                        const storyTags = story.querySelectorAll('.tag');
+                        let hasSelectedTag = false;
+
+                        storyTags.forEach(storyTag => {
+                            if (storyTag.dataset.tag === selectedTag) {
+                                hasSelectedTag = true;
+                                storyTag.classList.toggle('active');
+                            }
+                        });
+
+                        if (!hasSelectedTag) {
+                            story.classList.add('hidden');
+                        } else {
+                            story.classList.remove('hidden');
+                        }
+                    });
+
+                    // Deselect tag to show all stories
+                    const activeTags = document.querySelectorAll('.tag.active');
+                    if (activeTags.length === 0) {
+                        stories.forEach(story => {
+                            story.classList.remove('hidden');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

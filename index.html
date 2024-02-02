@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sadeswrites' portfolio</title>
+    <!-- Add Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Add Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="stories/index.html">stories</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#commissions">commissions</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="sadie.jpg" alt="Profile Picture" class="profile-picture">
+        <h1>sadeswrites' portfolio</h1>
+        <p>queer-friendly sci-fi and fantasy short stories</p>
+        <a href="stories/index.html" class="btn">explore stories</a>
+    </section>
+
+    <!-- Featured Stories Section -->
+    <section class="featured-stories" id="stories">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- First blog post -->
+                <div class="swiper-slide">
+                    <h2>The Last Star</h2>
+                    <p class="post-date">Posted on February 1, 2024</p>
+                    <p>The stars in the night sky have begun to disappear.</p>
+                </div>
+
+                <!-- Second blog post -->
+                <div class="swiper-slide">
+                    <h2>Short Story 2</h2>
+                    <p class="post-date">Posted on February 2, 2024</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ante vitae quam condimentum bibendum. Fusce auctor tristique mi at sollicitudin.</p>
+                </div>
+
+                <!-- Third blog post -->
+                <div class="swiper-slide">
+                    <h2>Short Story 3</h2>
+                    <p class="post-date">Posted on February 3, 2024</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ante vitae quam condimentum bibendum. Fusce auctor tristique mi at sollicitudin.</p>
+                </div>
+
+                <!-- Fourth blog post -->
+                <div class="swiper-slide">
+                    <h2>Short Story 4</h2>
+                    <p class="post-date">Posted on February 4, 2024</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ante vitae quam condimentum bibendum. Fusce auctor tristique mi at sollicitudin.</p>
+                </div>
+
+                <!-- Fifth blog post -->
+                <div class="swiper-slide">
+                    <h2>Short Story 5</h2>
+                    <p class="post-date">Posted on February 5, 2024</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ante vitae quam condimentum bibendum. Fusce auctor tristique mi at sollicitudin.</p>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>about me</h2>
+        <p>I'm sadeswrites, a passionate writer dedicated to creating captivating short stories that resonate with readers. With a love for storytelling and a creative mind, I strive to bring unique narratives to life through my writing. Explore my portfolio and dive into the world of imagination.</p>
+    </section>
+
+    <!-- Commissions Section -->
+    <section id="commissions" class="commissions">
+        <h2>commissions</h2>
+        <p>i am currently open for commissions! contact me directly or on fiverr.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>contact me</h2>
+        <p>if you have any questions or inquiries, feel free to contact me via email:</p>
+        <a href="mailto:sadeswrites@gmail.com" class="email-link">sadeswrites@gmail.com</a>
+    </section>
+  
+
+    <footer>
+        <ul>
+            <li><a href="https://www.tumblr.com/sadeswrites">tumblr</a></li>
+            <li><a href="https://www.fiverr.com/sadeswrites">fiverr</a></li>
+            <li><a href="https://www.threads.net/@sadeswrites">threads</a></li>
+            <li><a href="https://www.instagram.com/sadeswrites/">instagram</a></li>
+        </ul>
+        <p>&copy;2024 sadeswrites</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 8000, // Rotate every 8 seconds
+                disableOnInteraction: false, // Continue autoplay even when user interacts with the slider
+            },
+        });
+    </script>
+</body>
+</html>

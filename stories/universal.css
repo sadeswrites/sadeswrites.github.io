@@ -1,0 +1,39 @@
+
+
+.story-container {
+    padding: 20px;
+}
+
+.story {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.story-title {
+    color: #40514e; /* Dark green title */
+    font-size: 2em;
+}
+
+.story-metadata {
+    color: #6d7373; /* Medium dark green metadata */
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+
+.story-content {
+    margin-top: 20px;
+    line-height: 1.6;
+    width: 600px;
+}
+
+.story-content p {
+    margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .story-content {
+        width: 100%;
+    }
+}

@@ -1,0 +1,260 @@
+:root {
+  --swiper-pagination-bottom: -130px;
+  --swiper-theme-color: #40514e;
+  --background-color: #e0f2e9; /* Pastel green background */
+  --header-bg-color: #b8f2e6; /* Light pastel green header */
+  --link-color: #40514e; /* Dark green links */
+  --hover-color: #7da87b; /* Light green on hover */
+  --active-color: #40514e; /* Dark green when clicked */
+  --hero-bg-color: #d3f0df; /* Light pastel green hero background */
+  --about-bg-color: #d3f0df; /* Light pastel green about background */
+  --heading-color: #40514e; /* Dark green heading */
+  --text-color: #6d7373; /* Medium dark green text */
+  --button-bg-color: #40514e; /* Dark green button */
+  --button-hover-color: #6d7373; /* Medium dark green hover */
+  --footer-bg-color: #b8f2e6; /* Light pastel green footer */
+  --card-background-color: #ffffff;
+  --text-color: #40514e;
+  --text-light-color: #6d7373;
+  --tag-background-color: #b8f2e6;
+  --tag-text-color: #40514e;
+  --tag-active-background-color: #40514e;
+  --tag-active-text-color: #ffffff;
+}
+
+/* General Styles */
+body {
+  font-family: 'Courier New', Courier, monospace; /* Typewriter font */
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+header {
+  background-color: var(--header-bg-color);
+  padding: 10px 0;
+}
+
+nav ul li a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: var(--hover-color);
+}
+
+nav ul li a:active {
+  color: var(--active-color);
+}
+
+/* Hero Section Styles */
+.hero {
+  text-align: center;
+  padding: 50px 0;
+  background-color: var(--hero-bg-color);
+  position: relative; /* Position relative for centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 150px; /* Adjust the size of the profile picture */
+  height: 150px;
+  border-radius: 50%; /* Make it circular */
+  border: 5px solid var(--link-color); /* Dark green border */
+}
+
+.hero h1 {
+  font-size: 3em;
+  color: var(--heading-color); /* Dark green heading */
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  color: var(--text-color); /* Medium dark green text */
+  margin-top: 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  width: 10%;
+  background-color: var(--button-bg-color); /* Dark green button */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--button-hover-color); /* Medium dark green hover */
+}
+
+/* Featured Stories Section */
+.featured-stories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--footer-bg-color); /* Light pastel green footer */
+  color: var(--link-color); /* Dark green text */
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0; /* Remove padding from the footer ul */
+}
+
+footer ul li a {
+  color: var(--link-color); /* Dark green social links */
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: var(--hover-color); /* Light green on hover */
+}
+
+footer ul li a:active {
+  color: var(--active-color); /* Dark green when clicked */
+}
+
+.swiper-container {
+  width: 80%; /* Set the width to 500 pixels */
+  height: 360px;
+  overflow: hidden; /* Ensure content doesn't overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-slide {
+  width: 500px; /* Set the width */
+  height: 350px;
+  border: 1px solid #ccc; /* Border to match the theme */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  transition: transform 0.3s ease; /* Add transition for smooth rotation */
+}
+
+.swiper-slide img {
+  width: 100px; /* Ensure the image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid #ccc; /* Border for image */
+  padding: 5px; /* Add padding around the image */
+}
+
+.swiper-slide h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.swiper-slide p {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* Active slide */
+.swiper-slide-active {
+  transform: scale(1.05); /* Enlarge the active slide slightly */
+}
+
+/* Swiper Container Styles for Smaller Screens */
+@media only screen and (max-width: 767px) {
+  :root {    
+    --swiper-pagination-bottom: -80px;
+  }
+
+  .swiper-container {
+    width: 95%; /* Full width for smaller screens */
+  }
+
+  .swiper-slide {
+    width: 95%; /* Full width for smaller screens */
+    max-width: none; /* Remove max-width for smaller screens */
+  }
+
+  .swiper-slide img {
+    width: 20%; /* Make images fill the slide container */
+    border: none; /* Remove border for images on smaller screens */
+  }
+
+  .hero {
+    padding: 30px 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .hero h1 {
+    font-size: 1.5em; /* Adjusted font size for smaller screens */
+  }
+
+  .hero p {
+    font-size: 1em; /* Adjusted font size for smaller screens */
+  }
+
+  .btn {
+    width: 70%; /* Adjusted width for smaller screens */
+  }
+}
+
+
+/* About Section Styles */
+.about, .contact {
+  text-align: center;
+  padding: 50px 0;
+  background-color: var(--about-bg-color); /* Light pastel green background */
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.about h2, .contact h2 {
+  color: var(--dark-green); /* Dark green heading */
+}
+
+.about p, .contact p {
+  width: 70%;
+  font-size: 1.2em;
+  color: var(--medium-dark-green); /* Medium dark green text */
+  align-self: center;
+}
+
+/* Commissions Section */
+.commissions {
+  background-color: var(--light-pastel-green);
+  padding: 50px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.commissions h2 {
+  color: var(--dark-green);
+}
+
+.commissions p {
+  color: var(--medium-dark-green);
+  font-size: 1.2em;
+}
+
+.email-link {
+  color: var(--dark-green);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.email-link:hover {
+  color: var(--light-green);
+}

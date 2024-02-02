@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to HTML Converter</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="pdf-convertor.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Stories</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="converter-container">
+        <h1>PDF to HTML Converter</h1>
+        <input type="file" id="pdfInput" accept=".pdf">
+        <label for="titleInput">Title:</label>
+        <input type="text" id="titleInput">
+        <label for="dateInput">Publish Date:</label>
+        <input type="date" id="dateInput">
+        <button id="convertButton">Convert PDF</button>
+        <div id="htmlOutput"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
