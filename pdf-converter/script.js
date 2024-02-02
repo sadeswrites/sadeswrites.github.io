@@ -30,6 +30,7 @@ function convertToHtml(pdfData, title, publishDate) {
         html += `</title>
         <link rel="stylesheet" href="../../styles.css">
         <link rel="stylesheet" href="../universal.css">
+        <link rel="icon" type="image/x-icon" href="../../favicon.png">
     </head>
     <body>
         <header>
