@@ -36,11 +36,11 @@ function convertToHtml(pdfData, title, publishDate) {
         <header>
             <nav>
                 <ul>
-                    <li><a href="../../index.html">home</a></li>
-                    <li><a href="../index.html">stories</a></li>
-                    <li><a href="../../index.html#about">about</a></li>
-                    <li><a href="../../index.html#commissions">commissions</a></li>
-                    <li><a href="../../index.html#contact">contact</a></li>
+                    <li><a href="../../">home</a></li>
+                    <li><a href="../">stories</a></li>
+                    <li><a href="../../#about">about</a></li>
+                    <li><a href="../../#commissions">commissions</a></li>
+                    <li><a href="../../#contact">contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -49,7 +49,7 @@ function convertToHtml(pdfData, title, publishDate) {
             <img src="../../sadie.jpg" alt="Profile Picture" class="profile-picture">
             <h1>sadeswrites' portfolio</h1>
             <p>queer-friendly sci-fi and fantasy short stories</p>
-            <a href="../index.html" class="btn">explore stories</a>
+            <a href="../" class="btn">explore stories</a>
         </section>
     
         <section class="story-container">
@@ -104,7 +104,7 @@ function saveHtmlToFile(htmlContent) {
     var blob = new Blob([htmlContent], { type: 'text/html' });
     var link = document.createElement('a');
     link.href = window.URL.createObjectURL(blob);
-    link.download = 'index.html';
+    link.download = '';
     link.click();
 }
 
