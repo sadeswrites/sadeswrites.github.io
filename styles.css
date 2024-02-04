@@ -147,20 +147,35 @@ footer ul li a:active {
   transition: transform 0.3s ease; /* Add transition for smooth rotation */
 }
 
-.swiper-slide img {
+.swiper-slide a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.swiper-slide a:hover {
+  color: var(--hover-color);
+}
+
+.swiper-slide a:active {
+  color: var(--active-color);
+}
+
+.swiper-slide a img {
   width: 100px; /* Ensure the image fills the container */
   height: auto; /* Maintain aspect ratio */
   border-bottom: 1px solid #ccc; /* Border for image */
   padding: 5px; /* Add padding around the image */
 }
 
-.swiper-slide h2 {
+.swiper-slide a h2 {
   margin: 10px 0;
   font-size: 1.5em;
   padding: 10px;
+  text-decoration: underline;
 }
 
-.swiper-slide p {
+.swiper-slide a p {
   margin-bottom: 10px;
   padding: 10px;
 }
@@ -185,7 +200,7 @@ footer ul li a:active {
     max-width: none; /* Remove max-width for smaller screens */
   }
 
-  .swiper-slide img {
+  .swiper-slide a img {
     width: 20%; /* Make images fill the slide container */
     border: none; /* Remove border for images on smaller screens */
   }
