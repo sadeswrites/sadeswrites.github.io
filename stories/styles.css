@@ -1,6 +1,6 @@
 .story-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the minimum width of each card */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust the minimum width of each card */
     grid-gap: 20px; /* Adjust the gap between cards */
     padding: 20px; /* Add padding around the grid */
   }
@@ -10,6 +10,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    min-height: 350px;
     transition: transform 0.3s ease;
   }
   
@@ -66,8 +67,25 @@
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
   }
+
+  .hero-tags {
+    background-color: var(--card-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 95%;
+  }
+
+  .detail-tag {
+    background-color: var(--tag-detail-background-color);
+    color: var(--tag-detail-text-color);
+  }
+
+  .hero-tag {
+    margin: 2.5px;
+  }
   
-  .tag.active {
+  .tag.active, .hero-tags.tag.active {
     background-color: var(--tag-active-background-color);
     color: var(--tag-active-text-color);
   }

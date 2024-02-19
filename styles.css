@@ -18,6 +18,10 @@
   --text-light-color: #6d7373;
   --tag-background-color: #b8f2e6;
   --tag-text-color: #40514e;
+  --tag-detail-background-color: #d3f0df;
+  --tag-detail-text-color: #40514e;
+  --tag-hero-background-color: #40514e;
+  --tag-hero-text-color: #ffffff;
   --tag-active-background-color: #40514e;
   --tag-active-text-color: #ffffff;
 }
